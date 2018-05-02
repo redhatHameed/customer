@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "f4644fd2-2b5a-4580-b6d4-c2c647c4c8e5",
+		"name": "customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "customer",
+			"description": "Folder for customer",
+			"item": [
+				{
+					"name": "gets customers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d0e3dad4-721b-4802-89f2-771c37bae1a7",
+								"type": "text/javascript",
+								"exec": [
+									"//var expectedName = globals[\"name\"];",
+									"var expectedName=\"My fav implmentation kind\";",
+									"var jsonData = JSON.parse(responseBody);",
+									"console.log(\"test1\");",
+									"",
+									"var schema = {",
+									" \"type\": \"object\",",
+									" \"properties\": {",
+									"    \"name\": { \"type\": \"string\", \"enum\": [expectedName] },",
+									"    \"category\": { \"type\": \"string\" },",
+									"   ",
+									"    \"id\": { \"type\": \"number\" },",
+									"    \"region\": { \"type\": \"string\" }",
+									"  }",
+									"};",
+									"",
+									"tests[\"Valid name in response\"] = tv4.validate(jsonData, schema);"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http:///customer",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"customer"
+							]
+						},
+						"description": "gets customers"
+					},
+					"response": [
+						{
+							"id": "bf3516bc-66d0-4c86-8886-6612b7e3464a",
+							"name": "gets customers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http:///customer",
+									"host": [
+										"http:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"customer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [],
+							"body": "{\n\t\"name\": \"This is a Mock customer\",\n\t\"category\": \"gold\",\n\t\"id\": 3,\n\t\"region\": \"Americas\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "should be of type customer"
+						},
+						"url": {
+							"raw": "http:///customer",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"customer"
+							]
+						},
+						"description": "update customer"
+					},
+					"response": []
+				},
+				{
+					"name": "create a new customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "should be of type customer"
+						},
+						"url": {
+							"raw": "http:///customer",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"customer"
+							]
+						},
+						"description": "create a new customer"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
