@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "f4644fd2-2b5a-4580-b6d4-c2c647c4c8e5",
 		"name": "customer",
+		"description": "version=1.0   this is a service for all customer information",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -59,7 +60,7 @@
 					},
 					"response": [
 						{
-							"id": "bf3516bc-66d0-4c86-8886-6612b7e3464a",
+							"id": "6a43582d-71c5-4372-af9d-1a0eeece134b",
 							"name": "gets customers",
 							"originalRequest": {
 								"method": "GET",
@@ -138,6 +139,28 @@
 					"response": []
 				}
 			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "00448d67-684a-4212-a99f-b882c8f4abba",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "10def50d-eb68-4e36-8367-2d6cd1b09cf7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
