@@ -1,0 +1,94 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0.0",
+    "title" : "customer"
+  },
+  "paths" : {
+    "/customer" : {
+      "get" : {
+        "summary" : "gets customers",
+        "description" : "gets customers",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "When op is successful",
+            "schema" : {
+              "$ref" : "#/definitions/customer"
+            }
+          }
+        },
+        "x-contentType" : "application/json",
+        "x-accepts" : "application/json"
+      },
+      "post" : {
+        "summary" : "create a new customer",
+        "description" : "create a new customer",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "description" : "should be of type customer",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/customer"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "when op fine",
+            "schema" : {
+              "$ref" : "#/definitions/customer"
+            }
+          }
+        },
+        "x-contentType" : "application/json",
+        "x-accepts" : "application/json"
+      },
+      "put" : {
+        "summary" : "update customer",
+        "description" : "update customer",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "description" : "should be of type customer",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/customer"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "when op successful",
+            "schema" : {
+              "$ref" : "#/definitions/customer"
+            }
+          }
+        },
+        "x-contentType" : "application/json",
+        "x-accepts" : "application/json"
+      }
+    }
+  },
+  "definitions" : {
+    "customer" : {
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "category" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "region" : {
+          "type" : "string"
+        }
+      },
+      "title" : "Root Type for customer",
+      "description" : "The root of the customer type's schema."
+    }
+  }
+}
