@@ -1,0 +1,106 @@
+{
+	"variables": [],
+	"info": {
+		"name": "customer",
+		"_postman_id": "16d4067c-1867-4837-0acc-77282aa0e3be",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "customer",
+			"description": "Folder for customer",
+			"item": [
+				{
+					"name": "gets customers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var expectName=\"This mock customer\"",
+									"var jsonData= JSON.parse(requestBody);",
+									"console.log(\"test1\");",
+									"",
+									"var schema={",
+									"",
+									"\"type\": \"Object\",",
+									" \"properties\": {",
+									"  \"name\":{",
+									"  \"type\": \"string\" ,",
+									"  \"enum\": [expectName]},",
+									"  \"category\":{\"type\":\"string\"},",
+									"  \"id\": {\"type\":\"number\"},",
+									"   \"region\":{\"type\": \"string\"}",
+									"  ",
+									"  }",
+									" ",
+									"  };",
+									"  ",
+									"  tests[\"valid name in response\"]=tv4.validate(jsonData,schema);",
+									"  "
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http:///customer",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "gets customers"
+					},
+					"response": [
+						{
+							"id": "68ca1084-c89f-497d-8ec6-1de2badb4d30",
+							"name": "gets customers",
+							"originalRequest": {
+								"url": "http:///customer",
+								"method": "GET",
+								"header": [],
+								"body": {}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"_postman_previewtype": "parsed",
+							"header": [],
+							"cookie": [],
+							"responseTime": 0,
+							"body": "{\n\t\"name\": \"This mock customer\",\n\t\"category\": \"gold\",\n\t\"id\": 3,\n\t\"region\": \"America\"\n\n}"
+						}
+					]
+				},
+				{
+					"name": "update customer",
+					"request": {
+						"url": "http:///customer",
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "should be of type customer"
+						},
+						"description": "update customer"
+					},
+					"response": []
+				},
+				{
+					"name": "create a new customer",
+					"request": {
+						"url": "http:///customer",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "should be of type customer"
+						},
+						"description": "create a new customers"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
