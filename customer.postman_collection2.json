@@ -3,7 +3,7 @@
 	"info": {
 		"name": "customer",
 		"_postman_id": "16d4067c-1867-4837-0acc-77282aa0e3be",
-		"description": "",
+		"description": "version=1.0 this is a service for all customer information",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -53,7 +53,7 @@
 					},
 					"response": [
 						{
-							"id": "68ca1084-c89f-497d-8ec6-1de2badb4d30",
+							"id": "3adde0ea-656b-4f9c-8aa6-f37046afd822",
 							"name": "gets customers",
 							"originalRequest": {
 								"url": "http:///customer",
